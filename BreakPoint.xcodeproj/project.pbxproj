@@ -57,14 +57,62 @@
 			isa = PBXGroup;
 			children = (
 				D7E3AC34207B211400C7A4FB /* AppDelegate.swift */,
-				D7E3AC36207B211400C7A4FB /* FirstViewController.swift */,
-				D7E3AC38207B211400C7A4FB /* SecondViewController.swift */,
 				D7E3AC3A207B211400C7A4FB /* Main.storyboard */,
+				D7E3AC4A207B219900C7A4FB /* View Controller */,
+				D7E3AC49207B218000C7A4FB /* View */,
+				D7E3AC48207B217400C7A4FB /* Model */,
+				D7E3AC4D207B21D100C7A4FB /* Services */,
+				D7E3AC4C207B21B200C7A4FB /* UItilites */,
+				D7E3AC4B207B21AA00C7A4FB /* Extension */,
 				D7E3AC3D207B211700C7A4FB /* Assets.xcassets */,
 				D7E3AC3F207B211700C7A4FB /* LaunchScreen.storyboard */,
 				D7E3AC42207B211700C7A4FB /* Info.plist */,
 			);
 			path = BreakPoint;
+			sourceTree = "<group>";
+		};
+		D7E3AC48207B217400C7A4FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7E3AC49207B218000C7A4FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7E3AC4A207B219900C7A4FB /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7E3AC36207B211400C7A4FB /* FirstViewController.swift */,
+				D7E3AC38207B211400C7A4FB /* SecondViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		D7E3AC4B207B21AA00C7A4FB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D7E3AC4C207B21B200C7A4FB /* UItilites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UItilites;
+			sourceTree = "<group>";
+		};
+		D7E3AC4D207B21D100C7A4FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
