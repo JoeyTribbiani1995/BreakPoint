@@ -30,12 +30,11 @@ class AuthSerivce {
     
     func loginUser(withEmail email : String , andPassword password : String , completion : @escaping CompletionHandler) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            guard let user = user else {
-                completion(false ,error)
-                
+            if error != nil {
+                completion(false, error)
                 return
             }
-            completion(true,error)
+            completion(true,nil)
         }
     }
 }

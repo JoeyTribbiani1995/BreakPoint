@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-@IBDesignable
 class insetTextField: UITextField {
     
     private var padding = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
