@@ -12,8 +12,8 @@
 		D7BFE1E9207B509600467F18 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1E8207B509600467F18 /* AuthService.swift */; };
 		D7BFE1EB207B515400467F18 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1EA207B515400467F18 /* Constant.swift */; };
 		D7E3AC35207B211400C7A4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC34207B211400C7A4FB /* AppDelegate.swift */; };
-		D7E3AC37207B211400C7A4FB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC36207B211400C7A4FB /* FirstViewController.swift */; };
-		D7E3AC39207B211400C7A4FB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC38207B211400C7A4FB /* SecondViewController.swift */; };
+		D7E3AC37207B211400C7A4FB /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC36207B211400C7A4FB /* FeedVC.swift */; };
+		D7E3AC39207B211400C7A4FB /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC38207B211400C7A4FB /* GroupVC.swift */; };
 		D7E3AC3C207B211400C7A4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E3AC3A207B211400C7A4FB /* Main.storyboard */; };
 		D7E3AC3E207B211700C7A4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E3AC3D207B211700C7A4FB /* Assets.xcassets */; };
 		D7E3AC41207B211700C7A4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E3AC3F207B211700C7A4FB /* LaunchScreen.storyboard */; };
@@ -32,8 +32,8 @@
 		D7BFE1EA207B515400467F18 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D7E3AC31207B211400C7A4FB /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E3AC34207B211400C7A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7E3AC36207B211400C7A4FB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D7E3AC38207B211400C7A4FB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D7E3AC36207B211400C7A4FB /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		D7E3AC38207B211400C7A4FB /* GroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVC.swift; sourceTree = "<group>"; };
 		D7E3AC3B207B211400C7A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7E3AC3D207B211700C7A4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7E3AC40207B211700C7A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		D7E3AC4A207B219900C7A4FB /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D7E3AC36207B211400C7A4FB /* FirstViewController.swift */,
-				D7E3AC38207B211400C7A4FB /* SecondViewController.swift */,
+				D7E3AC36207B211400C7A4FB /* FeedVC.swift */,
+				D7E3AC38207B211400C7A4FB /* GroupVC.swift */,
 				D7E3AC52207B40F000C7A4FB /* AuthVC.swift */,
 				D7E3AC54207B410500C7A4FB /* LoginVC.swift */,
 			);
@@ -300,13 +300,13 @@
 			files = (
 				D7E3AC53207B40F000C7A4FB /* AuthVC.swift in Sources */,
 				D7E3AC57207B41CF00C7A4FB /* insetTextField.swift in Sources */,
-				D7E3AC39207B211400C7A4FB /* SecondViewController.swift in Sources */,
+				D7E3AC39207B211400C7A4FB /* GroupVC.swift in Sources */,
 				D7BFE1E9207B509600467F18 /* AuthService.swift in Sources */,
 				D7E3AC55207B410600C7A4FB /* LoginVC.swift in Sources */,
 				D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */,
 				D7E3AC35207B211400C7A4FB /* AppDelegate.swift in Sources */,
 				D7BFE1EB207B515400467F18 /* Constant.swift in Sources */,
-				D7E3AC37207B211400C7A4FB /* FirstViewController.swift in Sources */,
+				D7E3AC37207B211400C7A4FB /* FeedVC.swift in Sources */,
 				D7E3AC51207B270400C7A4FB /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
