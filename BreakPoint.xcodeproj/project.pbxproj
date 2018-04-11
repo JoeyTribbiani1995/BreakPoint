@@ -11,6 +11,8 @@
 		D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1E6207B493F00467F18 /* ShadowView.swift */; };
 		D7BFE1E9207B509600467F18 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1E8207B509600467F18 /* AuthService.swift */; };
 		D7BFE1EB207B515400467F18 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1EA207B515400467F18 /* Constant.swift */; };
+		D7C95613207DB7C0008BD344 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C95612207DB7C0008BD344 /* MeVC.swift */; };
+		D7C95615207DB87D008BD344 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C95614207DB87D008BD344 /* PostVC.swift */; };
 		D7E3AC35207B211400C7A4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC34207B211400C7A4FB /* AppDelegate.swift */; };
 		D7E3AC37207B211400C7A4FB /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC36207B211400C7A4FB /* FeedVC.swift */; };
 		D7E3AC39207B211400C7A4FB /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC38207B211400C7A4FB /* GroupVC.swift */; };
@@ -30,6 +32,8 @@
 		D7BFE1E6207B493F00467F18 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		D7BFE1E8207B509600467F18 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D7BFE1EA207B515400467F18 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D7C95612207DB7C0008BD344 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
+		D7C95614207DB87D008BD344 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		D7E3AC31207B211400C7A4FB /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E3AC34207B211400C7A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7E3AC36207B211400C7A4FB /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				D7E3AC38207B211400C7A4FB /* GroupVC.swift */,
 				D7E3AC52207B40F000C7A4FB /* AuthVC.swift */,
 				D7E3AC54207B410500C7A4FB /* LoginVC.swift */,
+				D7C95612207DB7C0008BD344 /* MeVC.swift */,
+				D7C95614207DB87D008BD344 /* PostVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -304,7 +310,9 @@
 				D7BFE1E9207B509600467F18 /* AuthService.swift in Sources */,
 				D7E3AC55207B410600C7A4FB /* LoginVC.swift in Sources */,
 				D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */,
+				D7C95615207DB87D008BD344 /* PostVC.swift in Sources */,
 				D7E3AC35207B211400C7A4FB /* AppDelegate.swift in Sources */,
+				D7C95613207DB7C0008BD344 /* MeVC.swift in Sources */,
 				D7BFE1EB207B515400467F18 /* Constant.swift in Sources */,
 				D7E3AC37207B211400C7A4FB /* FeedVC.swift in Sources */,
 				D7E3AC51207B270400C7A4FB /* DataService.swift in Sources */,

@@ -9,3 +9,5 @@
 import Foundation
 
 typealias CompletionHandler =  (_ success : Bool ,_ error : Error?) -> ()
+
+typealias CompletionSend =  (_ success : Bool ) -> ()
