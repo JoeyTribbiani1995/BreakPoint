@@ -19,6 +19,7 @@ class PostVC: UIViewController , UITextViewDelegate {
         super.viewDidLoad()
         textView.delegate = self
         
+        sendBtn.bindToKeyboard()
     }
 
    
