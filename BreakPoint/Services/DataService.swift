@@ -47,7 +47,23 @@ class DataService {
             REF_FEED.childByAutoId().updateChildValues(["content":message,"senderId":uid])
             complete(true)
         }
+    }
+    
+    func getAllFeedMessages(completion : @escaping (_ message : [Message]) -> () ){
+        var messages = [Message]()
         
+        REF_FEED.observeSingleEvent(of: .value) { (feedMessageSnapshot) in
+            guard let feedMessageSnapshot = feedMessageSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for mes in feedMessageSnapshot {
+                let content = mes.childSnapshot(forPath: "content").value as! String
+                let senderId = mes.childSnapshot(forPath: "senderId").value as! String
+                let message = Message(content: content, senderId: senderId)
+                messages.append(message)
+            }
+            
+            completion(messages)
+        }
     }
     
     
