@@ -25,7 +25,7 @@ class FeedVC: UIViewController ,UITableViewDelegate , UITableViewDataSource {
         super.viewDidAppear(animated)
         
         DataService.instance.getAllFeedMessages { (messages) in
-            self.messages = messages
+            self.messages = messages.reversed() // reversed id to dx ....
             self.tableView.reloadData()
         }
     }
@@ -44,7 +44,9 @@ class FeedVC: UIViewController ,UITableViewDelegate , UITableViewDataSource {
             let message = messages[indexPath.row]
             let image = UIImage(named : "defaultProfileImage")!
             
-            cell.setupView(content: message.content, image: image, email: message.senderId)
+            DataService.instance.getUserName(forUID: message.senderId) { (email) in
+                 cell.setupView(content: message.content, image: image, email: email)
+            }
             
             return cell
         }else {

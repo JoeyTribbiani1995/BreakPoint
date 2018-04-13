@@ -15,11 +15,22 @@ class PostVC: UIViewController , UITextViewDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
         
         sendBtn.bindToKeyboard()
+        
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Auth.auth().currentUser != nil {
+            self.emailLbl.text = Auth.auth().currentUser?.email
+        }
     }
 
    
