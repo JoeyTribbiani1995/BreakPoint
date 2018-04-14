@@ -18,6 +18,8 @@ class CreateGroupVC: UIViewController ,UITableViewDelegate , UITableViewDataSour
     @IBOutlet weak var doneBtn: UIButton!
     
     
+    var emails = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +27,23 @@ class CreateGroupVC: UIViewController ,UITableViewDelegate , UITableViewDataSour
         tableView.dataSource = self
     }
 
+    @IBAction func textEditChanged(_ sender: UITextField) {
+        if emailSearchTextField.text == "" {
+            emails = []
+            tableView.reloadData()
+        }else {
+            DataService.instance.getEmailForSearchQuery(query: emailSearchTextField.text!) { (emailsReturn) in
+                self.emails = emailsReturn
+                self.tableView.reloadData()
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func closeBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func doneBtnPressed(_ sender: UIButton) {
@@ -40,14 +54,16 @@ class CreateGroupVC: UIViewController ,UITableViewDelegate , UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return emails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as? UserCell {
             
             let userImage = UIImage(named : "defaultProfileImage")
-            cell.setupView(image: userImage!, email: "hello@gmail.com", isSelected: true)
+            let email = emails[indexPath.row]
+            
+            cell.setupView(image: userImage!, email: email, isSelected: true)
             
             return cell
         }else {
