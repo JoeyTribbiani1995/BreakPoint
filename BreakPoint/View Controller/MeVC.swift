@@ -19,7 +19,10 @@ class MeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if Auth.auth().currentUser != nil {
             self.emailLbl.text = Auth.auth().currentUser?.email
         }

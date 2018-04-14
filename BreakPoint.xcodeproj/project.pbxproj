@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4BDDBD920A3B5B4CEFB8057 /* Pods_BreakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F3F6FD99EBBFD0F3DEFB55 /* Pods_BreakPoint.framework */; };
+		D73943E92081A5D30005D542 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73943E82081A5D30005D542 /* CreateGroupVC.swift */; };
 		D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1E6207B493F00467F18 /* ShadowView.swift */; };
 		D7BFE1E9207B509600467F18 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1E8207B509600467F18 /* AuthService.swift */; };
 		D7BFE1EB207B515400467F18 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1EA207B515400467F18 /* Constant.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		60F3F6FD99EBBFD0F3DEFB55 /* Pods_BreakPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DB84D500C20E072DF0AC46 /* Pods-BreakPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.debug.xcconfig"; sourceTree = "<group>"; };
+		D73943E82081A5D30005D542 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 		D7BFE1E6207B493F00467F18 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		D7BFE1E8207B509600467F18 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D7BFE1EA207B515400467F18 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				D7E3AC54207B410500C7A4FB /* LoginVC.swift */,
 				D7C95612207DB7C0008BD344 /* MeVC.swift */,
 				D7C95614207DB87D008BD344 /* PostVC.swift */,
+				D73943E82081A5D30005D542 /* CreateGroupVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				D7E3AC55207B410600C7A4FB /* LoginVC.swift in Sources */,
 				D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */,
 				D7C95615207DB87D008BD344 /* PostVC.swift in Sources */,
+				D73943E92081A5D30005D542 /* CreateGroupVC.swift in Sources */,
 				D7E3AC35207B211400C7A4FB /* AppDelegate.swift in Sources */,
 				D7C95613207DB7C0008BD344 /* MeVC.swift in Sources */,
 				D7BFE1EB207B515400467F18 /* Constant.swift in Sources */,
