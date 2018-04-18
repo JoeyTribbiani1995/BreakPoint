@@ -10,6 +10,8 @@
 		D4BDDBD920A3B5B4CEFB8057 /* Pods_BreakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F3F6FD99EBBFD0F3DEFB55 /* Pods_BreakPoint.framework */; };
 		D703C3C7208716B50010AE40 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703C3C6208716B50010AE40 /* GroupCell.swift */; };
 		D703C3C920872B380010AE40 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703C3C820872B380010AE40 /* Group.swift */; };
+		D703C3CB208733120010AE40 /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703C3CA208733120010AE40 /* GroupFeedCell.swift */; };
+		D703C3CF208733A70010AE40 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703C3CE208733A70010AE40 /* GroupFeedVC.swift */; };
 		D73943E92081A5D30005D542 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73943E82081A5D30005D542 /* CreateGroupVC.swift */; };
 		D73943EB2081AA070005D542 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73943EA2081AA070005D542 /* UserCell.swift */; };
 		D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1E6207B493F00467F18 /* ShadowView.swift */; };
@@ -38,6 +40,8 @@
 		63DB84D500C20E072DF0AC46 /* Pods-BreakPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.debug.xcconfig"; sourceTree = "<group>"; };
 		D703C3C6208716B50010AE40 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		D703C3C820872B380010AE40 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		D703C3CA208733120010AE40 /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		D703C3CE208733A70010AE40 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 		D73943E82081A5D30005D542 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 		D73943EA2081AA070005D542 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		D7BFE1E6207B493F00467F18 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				D7C9561C207DCE70008BD344 /* FeedCell.swift */,
 				D73943EA2081AA070005D542 /* UserCell.swift */,
 				D703C3C6208716B50010AE40 /* GroupCell.swift */,
+				D703C3CA208733120010AE40 /* GroupFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				D7C95612207DB7C0008BD344 /* MeVC.swift */,
 				D7C95614207DB87D008BD344 /* PostVC.swift */,
 				D73943E82081A5D30005D542 /* CreateGroupVC.swift */,
+				D703C3CE208733A70010AE40 /* GroupFeedVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C95619207DC562008BD344 /* UIViewExt.swift in Sources */,
+				D703C3CF208733A70010AE40 /* GroupFeedVC.swift in Sources */,
 				D7E3AC53207B40F000C7A4FB /* AuthVC.swift in Sources */,
 				D7E3AC57207B41CF00C7A4FB /* insetTextField.swift in Sources */,
 				D7E3AC39207B211400C7A4FB /* GroupVC.swift in Sources */,
@@ -340,6 +347,7 @@
 				D7E3AC35207B211400C7A4FB /* AppDelegate.swift in Sources */,
 				D7C95613207DB7C0008BD344 /* MeVC.swift in Sources */,
 				D7BFE1EB207B515400467F18 /* Constant.swift in Sources */,
+				D703C3CB208733120010AE40 /* GroupFeedCell.swift in Sources */,
 				D7C9561D207DCE70008BD344 /* FeedCell.swift in Sources */,
 				D7E3AC37207B211400C7A4FB /* FeedVC.swift in Sources */,
 				D7E3AC51207B270400C7A4FB /* DataService.swift in Sources */,
