@@ -19,12 +19,20 @@ class CreateGroupVC: UIViewController ,UITableViewDelegate , UITableViewDataSour
     
     
     var emails = [String]()
+    var chosenUsers = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        doneBtn.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
     }
 
     @IBAction func textEditChanged(_ sender: UITextField) {
@@ -63,13 +71,38 @@ class CreateGroupVC: UIViewController ,UITableViewDelegate , UITableViewDataSour
             let userImage = UIImage(named : "defaultProfileImage")
             let email = emails[indexPath.row]
             
-            cell.setupView(image: userImage!, email: email, isSelected: true)
-            
+            if chosenUsers.contains(email){
+                cell.setupView(image: userImage!, email: email, isSelected: true)
+            }else {
+                cell.setupView(image: userImage!, email: email, isSelected: false)
+            }
+
             return cell
         }else {
             return UITableViewCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else { return }
+        if !chosenUsers.contains(cell.emailLbl.text!){
+            chosenUsers.append(cell.emailLbl.text!)
+            groupMemberLbl.text = chosenUsers.joined(separator: ", ")
+            doneBtn.isHidden = false
+        }else {
+            chosenUsers = chosenUsers.filter({ $0 != cell.emailLbl.text! })
+            if chosenUsers.count >= 1 {
+                groupMemberLbl.text = chosenUsers.joined(separator: ", ")
+            }else {
+                groupMemberLbl.text = "add people to your group"
+                doneBtn.isHidden = true
+            }
+        }
+    }
+    
+    
+    
+    
     
     
 }
