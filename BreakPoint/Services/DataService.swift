@@ -27,7 +27,7 @@ class DataService {
         return _REF_USERS
     }
     
-    var REF_REF_GROUPS : DatabaseReference {
+    var REF_GROUPS : DatabaseReference {
         return _REF_GROUPS
     }
     
@@ -94,6 +94,27 @@ class DataService {
             
             completion(emails)
         }
+    }
+    
+    func getIDs(forUserName usernames : [String], completion : @escaping (_ ids : [String]) -> ()){
+        var idArray = [String]()
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for user in userSnapshot {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                if usernames.contains(email) {
+                    idArray.append(user.key)
+                }
+            }
+            completion(idArray)
+        }
+    }
+    
+    func createGroup(title : String , description : String , ids : [String] , completion : @escaping CompletionHandler){
+        REF_GROUPS.childByAutoId().updateChildValues(["title":title,"description":description,"ids":ids])
+        completion(true,nil)
     }
     
     
