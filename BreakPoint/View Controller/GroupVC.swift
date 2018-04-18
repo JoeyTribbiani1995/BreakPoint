@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupVC: UIViewController ,UITableViewDelegate , UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var groups = [Group]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +22,29 @@ class GroupVC: UIViewController ,UITableViewDelegate , UITableViewDataSource {
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DataService.instance.getAllGroup { (groupsReturn) in
+            self.groups = groupsReturn
+            self.tableView.reloadData()
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return groups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell") as? GroupCell {
             
-            cell.setupView(title: "abc", description: "acb", memberCount: 3)
+           let group = groups[indexPath.row]
+            
+            cell.setupView(with: group)
             
             return cell
         }else {

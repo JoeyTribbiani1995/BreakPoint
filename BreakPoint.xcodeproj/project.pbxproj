@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D4BDDBD920A3B5B4CEFB8057 /* Pods_BreakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F3F6FD99EBBFD0F3DEFB55 /* Pods_BreakPoint.framework */; };
 		D703C3C7208716B50010AE40 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703C3C6208716B50010AE40 /* GroupCell.swift */; };
+		D703C3C920872B380010AE40 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703C3C820872B380010AE40 /* Group.swift */; };
 		D73943E92081A5D30005D542 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73943E82081A5D30005D542 /* CreateGroupVC.swift */; };
 		D73943EB2081AA070005D542 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73943EA2081AA070005D542 /* UserCell.swift */; };
 		D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFE1E6207B493F00467F18 /* ShadowView.swift */; };
@@ -36,6 +37,7 @@
 		60F3F6FD99EBBFD0F3DEFB55 /* Pods_BreakPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DB84D500C20E072DF0AC46 /* Pods-BreakPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.debug.xcconfig"; sourceTree = "<group>"; };
 		D703C3C6208716B50010AE40 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		D703C3C820872B380010AE40 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D73943E82081A5D30005D542 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 		D73943EA2081AA070005D542 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		D7BFE1E6207B493F00467F18 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C9561A207DCAA5008BD344 /* Message.swift */,
+				D703C3C820872B380010AE40 /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				D7E3AC39207B211400C7A4FB /* GroupVC.swift in Sources */,
 				D73943EB2081AA070005D542 /* UserCell.swift in Sources */,
 				D7BFE1E9207B509600467F18 /* AuthService.swift in Sources */,
+				D703C3C920872B380010AE40 /* Group.swift in Sources */,
 				D7E3AC55207B410600C7A4FB /* LoginVC.swift in Sources */,
 				D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */,
 				D7C95615207DB87D008BD344 /* PostVC.swift in Sources */,

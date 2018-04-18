@@ -13,10 +13,10 @@ class GroupCell: UITableViewCell {
     @IBOutlet weak var descriptionGroupLbl: UILabel!
     @IBOutlet weak var memberGroupLbl: UILabel!
     
-    func setupView(title : String , description : String , memberCount : Int) {
-        self.titleGroupLbl.text = title
-        self.descriptionGroupLbl.text = description
-        self.memberGroupLbl.text = "\(memberCount) members"
+    func setupView(with group : Group) {
+        self.titleGroupLbl.text = group.groupTitle
+        self.descriptionGroupLbl.text = group.groupDesc
+        self.memberGroupLbl.text = "\(group.memberCount) members"
     }
 
 }
