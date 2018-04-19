@@ -350,7 +350,7 @@
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wwz-rr-Wfz" customClass="insetTextField" customModule="BreakPoint" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="15" width="317" height="30"/>
+                                        <rect key="frame" x="0.0" y="15" width="321" height="30"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
@@ -370,15 +370,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="K2J-8V-JGq"/>
-                                    <constraint firstItem="Wwz-rr-Wfz" firstAttribute="top" secondItem="pXd-Em-VNw" secondAttribute="top" constant="15" id="MCc-oY-SlI"/>
+                                    <constraint firstItem="Wwz-rr-Wfz" firstAttribute="leading" secondItem="pXd-Em-VNw" secondAttribute="leading" id="J5g-mL-NvP"/>
+                                    <constraint firstItem="nfX-di-tdO" firstAttribute="centerY" secondItem="Wwz-rr-Wfz" secondAttribute="centerY" id="JYd-qV-Cyd"/>
                                     <constraint firstAttribute="bottom" secondItem="nfX-di-tdO" secondAttribute="bottom" constant="15" id="Ozm-0i-bvV"/>
+                                    <constraint firstItem="nfX-di-tdO" firstAttribute="leading" secondItem="Wwz-rr-Wfz" secondAttribute="trailing" constant="8" id="Pi9-b4-xY9"/>
                                     <constraint firstAttribute="trailing" secondItem="nfX-di-tdO" secondAttribute="trailing" constant="16" id="TDS-of-06Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wwz-rr-Wfz" secondAttribute="trailing" constant="50" id="TtU-Ry-arw"/>
-                                    <constraint firstItem="nfX-di-tdO" firstAttribute="centerY" secondItem="Wwz-rr-Wfz" secondAttribute="centerY" id="Xny-XM-vox"/>
                                     <constraint firstItem="nfX-di-tdO" firstAttribute="top" secondItem="pXd-Em-VNw" secondAttribute="top" constant="15" id="ZoN-Kg-id3"/>
-                                    <constraint firstItem="Wwz-rr-Wfz" firstAttribute="leading" secondItem="pXd-Em-VNw" secondAttribute="leading" constant="8" id="lue-io-d5H"/>
-                                    <constraint firstAttribute="bottom" secondItem="Wwz-rr-Wfz" secondAttribute="bottom" constant="15" id="qps-pl-hb2"/>
+                                    <constraint firstItem="Wwz-rr-Wfz" firstAttribute="top" secondItem="pXd-Em-VNw" secondAttribute="top" constant="15" id="geR-Lw-lSo"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -803,7 +801,6 @@
                                             <outlet property="descriptionGroupLbl" destination="q25-1S-swX" id="nCY-zM-Ygn"/>
                                             <outlet property="memberGroupLbl" destination="3hl-EM-uXY" id="3M4-a6-xc6"/>
                                             <outlet property="titleGroupLbl" destination="0Kl-gY-Gn6" id="Gkj-lA-KF5"/>
-                                            <segue destination="H5C-s7-mNL" kind="presentation" id="gbn-Gx-AgH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

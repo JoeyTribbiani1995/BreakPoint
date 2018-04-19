@@ -17,6 +17,11 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
     @IBOutlet weak var sendBtm: UIButton!
     @IBOutlet weak var messTextField: insetTextField!
     
+    var group : Group?
+    
+    func initGroupData(forGroup group : Group){
+       self.group = group
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +32,16 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
        
         sendBtm.bindToKeyboard()
         messTextField.bindToKeyboard()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        groupTitleLbl.text = group?.groupTitle
+        DataService.instance.getEmailsFor(group: group!) { (emailsReturn) in
+            self.memberLbl.text = emailsReturn.joined(separator: ", ")
+        }
+        
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
