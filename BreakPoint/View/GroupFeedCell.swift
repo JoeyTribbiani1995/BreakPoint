@@ -14,10 +14,13 @@ class GroupFeedCell: UITableViewCell {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var messageContentLbl: UILabel!
     
-    func setupView(){
-//        profileImageView.image
-//        emailLbl.text =
-//        messageContentLbl.text = 
+    func setupView(mess : Message , profileImage : UIImage ){
+        
+        DataService.instance.getUserName(forUID: mess.senderId) { (returnEmail) in
+            self.emailLbl.text = returnEmail
+        }
+        messageContentLbl.text = mess.content
+        profileImageView.image = profileImage
     }
     
 }

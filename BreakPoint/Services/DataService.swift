@@ -42,7 +42,8 @@ class DataService {
     
     func uploadPost(withMessage message : String , forUID uid : String , withGroupKey groupKey : String? ,complete : @escaping CompletionSend){
         if groupKey != nil {
-            
+            REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content":message,"senderId":uid])
+            complete(true)
         }else {
             REF_FEED.childByAutoId().updateChildValues(["content":message,"senderId":uid])
             complete(true)
@@ -148,6 +149,21 @@ class DataService {
             }
             
             completion(emailArray)
+        }
+    }
+    
+    func getAllMessagesFor(group : Group,completion : @escaping (_ messsArray : [Message])->()){
+        var groupMessArray = [Message]()
+        REF_GROUPS.child(group.key).child("messages").observeSingleEvent(of: .value) { (groupMessSnapshot) in
+            guard let groupMessSnapshot = groupMessSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for groupMess in groupMessSnapshot {
+                let content = groupMess.childSnapshot(forPath: "content").value as! String
+                let senderId = groupMess.childSnapshot(forPath: "senderId").value as! String
+                let groupMess = Message(content: content, senderId: senderId)
+                groupMessArray.append(groupMess)
+            }
+            
+            completion(groupMessArray)
         }
     }
     

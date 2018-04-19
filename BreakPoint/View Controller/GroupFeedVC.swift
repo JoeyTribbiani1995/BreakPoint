@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
@@ -18,6 +19,7 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
     @IBOutlet weak var messTextField: insetTextField!
     
     var group : Group?
+    var groupMess = [Message]()
     
     func initGroupData(forGroup group : Group){
        self.group = group
@@ -32,6 +34,8 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
        
         sendBtm.bindToKeyboard()
         messTextField.bindToKeyboard()
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +43,18 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
         groupTitleLbl.text = group?.groupTitle
         DataService.instance.getEmailsFor(group: group!) { (emailsReturn) in
             self.memberLbl.text = emailsReturn.joined(separator: ", ")
+        }
+        
+        DataService.instance.REF_GROUPS.observe(.value) { (snapShot) in
+            DataService.instance.getAllMessagesFor(group: self.group!) { (returnGroupMess) in
+                self.groupMess = returnGroupMess
+                self.tableView.reloadData()
+                
+                if self.groupMess.count > 0 {
+                    let endIndex = IndexPath(row: self.groupMess.count-1 , section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                }
+            }
         }
         
         
@@ -49,11 +65,15 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return groupMess.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GroupFeedCell") as? GroupFeedCell {
+            
+            let image = UIImage(named : "defaultProfileImage")
+            let mess = groupMess[indexPath.row]
+            cell.setupView(mess: mess, profileImage: image!)
             
             return cell
         }else {
@@ -66,5 +86,16 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
     }
     
     @IBAction func sendBtnPressed(_ sender: UIButton) {
+        print("send press ------------")
+        if messTextField.text != "" {
+            
+            DataService.instance.uploadPost(withMessage: messTextField.text!, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: group?.key) { (success) in
+                if success {
+                    self.messTextField.resignFirstResponder()
+                    self.messTextField.text = ""
+                }
+            }
+        }
+        
     }
 }
