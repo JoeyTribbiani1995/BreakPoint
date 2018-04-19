@@ -282,18 +282,18 @@
                                     <constraint firstItem="ZbH-dO-Mzu" firstAttribute="centerX" secondItem="QCO-Ny-bw9" secondAttribute="centerX" id="seI-zq-I5Y"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Nc5-qz-tJj">
-                                <rect key="frame" x="0.0" y="70" width="375" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Member" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nc5-qz-tJj">
+                                <rect key="frame" x="0.0" y="70" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="XgY-AH-06G"/>
+                                    <constraint firstAttribute="height" constant="60" id="XgY-AH-06G"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Opq-Oy-WdO">
-                                <rect key="frame" x="0.0" y="114" width="375" height="483"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="467"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupFeedCell" rowHeight="110" id="nsE-xU-zy2" customClass="GroupFeedCell" customModule="BreakPoint" customModuleProvider="target">
@@ -372,7 +372,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Opq-Oy-WdO" firstAttribute="top" secondItem="Nc5-qz-tJj" secondAttribute="bottom" id="0gY-fV-VXW"/>
                             <constraint firstItem="Wwz-rr-Wfz" firstAttribute="bottom" secondItem="RHc-R7-k3W" secondAttribute="bottom" id="4BU-xv-JAP"/>
                             <constraint firstItem="Opq-Oy-WdO" firstAttribute="trailing" secondItem="RHc-R7-k3W" secondAttribute="trailing" id="D1k-z9-H2H"/>
                             <constraint firstItem="nfX-di-tdO" firstAttribute="centerY" secondItem="Wwz-rr-Wfz" secondAttribute="centerY" id="FWl-TY-FnL"/>
@@ -386,6 +385,7 @@
                             <constraint firstItem="Opq-Oy-WdO" firstAttribute="leading" secondItem="RHc-R7-k3W" secondAttribute="leading" id="axe-rO-38r"/>
                             <constraint firstItem="RHc-R7-k3W" firstAttribute="trailing" secondItem="Wwz-rr-Wfz" secondAttribute="trailing" id="faJ-BB-08t"/>
                             <constraint firstItem="Nc5-qz-tJj" firstAttribute="trailing" secondItem="RHc-R7-k3W" secondAttribute="trailing" id="gCY-Tv-r0j"/>
+                            <constraint firstItem="Opq-Oy-WdO" firstAttribute="top" secondItem="Nc5-qz-tJj" secondAttribute="bottom" id="vdC-WA-4er"/>
                             <constraint firstItem="RHc-R7-k3W" firstAttribute="trailing" secondItem="nfX-di-tdO" secondAttribute="trailing" constant="10" id="xUs-AN-Gg6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RHc-R7-k3W"/>

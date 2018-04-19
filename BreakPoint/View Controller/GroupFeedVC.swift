@@ -31,11 +31,7 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
         tableView.dataSource = self
         tableView.delegate = self
         
-       
-        sendBtm.bindToKeyboard()
-        messTextField.bindToKeyboard()
-        
-       
+        view.bindToKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +78,7 @@ class GroupFeedVC: UIViewController , UITableViewDelegate , UITableViewDataSourc
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
     
     @IBAction func sendBtnPressed(_ sender: UIButton) {

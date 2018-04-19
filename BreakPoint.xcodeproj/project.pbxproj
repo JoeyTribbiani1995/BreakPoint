@@ -33,6 +33,7 @@
 		D7E3AC53207B40F000C7A4FB /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC52207B40F000C7A4FB /* AuthVC.swift */; };
 		D7E3AC55207B410600C7A4FB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC54207B410500C7A4FB /* LoginVC.swift */; };
 		D7E3AC57207B41CF00C7A4FB /* insetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3AC56207B41CF00C7A4FB /* insetTextField.swift */; };
+		D7FA658B20887DAB007B3116 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FA658A20887DAB007B3116 /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		D7E3AC52207B40F000C7A4FB /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		D7E3AC54207B410500C7A4FB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D7E3AC56207B41CF00C7A4FB /* insetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = insetTextField.swift; sourceTree = "<group>"; };
+		D7FA658A20887DAB007B3116 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		FC827E60E018F436EECCF3CC /* Pods-BreakPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C95618207DC562008BD344 /* UIViewExt.swift */,
+				D7FA658A20887DAB007B3116 /* UIViewControllerExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				D7BFE1E7207B493F00467F18 /* ShadowView.swift in Sources */,
 				D7C95615207DB87D008BD344 /* PostVC.swift in Sources */,
 				D703C3C7208716B50010AE40 /* GroupCell.swift in Sources */,
+				D7FA658B20887DAB007B3116 /* UIViewControllerExt.swift in Sources */,
 				D73943E92081A5D30005D542 /* CreateGroupVC.swift in Sources */,
 				D7E3AC35207B211400C7A4FB /* AppDelegate.swift in Sources */,
 				D7C95613207DB7C0008BD344 /* MeVC.swift in Sources */,
